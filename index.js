@@ -5,7 +5,7 @@ const users = require("./MOCK_DATA.json")
 const app = express();
 const PORT = 8000;
 
-//middle ware- Pluggin
+
 app.use(express.urlencoded({ extended: false }))
 
 app.get("/api/users", (req, res) => {
@@ -36,7 +36,7 @@ app.post("/api/users", (req, res) => {
     fs.writeFile("./MOCK_DATA.json", JSON.stringify(users), (err, data) => {
         return res.json({ status: "sucess", id: users.length })
     })
-    //create new user
+    
 });
 
 app.patch("/api/users", (req, res) => {
@@ -62,7 +62,7 @@ app.patch("/api/users", (req, res) => {
             return res.status(404).json({ status: "error", message: "User with id 1 not found" });
         }
 
-        // 🔁 Update the user data
+      
         if (first_name !== undefined) users[userIndex].first_name = first_name;
         if (last_name !== undefined) users[userIndex].last_name = last_name;
         if (email !== undefined) users[userIndex].email = email;
@@ -77,10 +77,10 @@ app.patch("/api/users", (req, res) => {
         });
     });
 });
-//use to edit user;
+
 
 app.delete("/api/users", (req, res) => {
-    return res.json({ status: "pending" }) //use to delete
+    return res.json({ status: "pending" }) 
 });
 
 
