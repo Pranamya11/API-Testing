@@ -1,0 +1,16 @@
+//Rest Api--Json
+
+
+GET/user-html document rendering
+GET /users-List all user json- Done
+
+
+GET/api/user/1-get the user with id 1  we need to use dynamic path for specifing the user no.
+GET/api/user/2-get the user with id 2  [:id ]=> column make any item dynamic
+
+POST/api /user -create new user
+
+PATCH/api/user/1-Edit the user with id 1
+
+Delete/api /user/1-Delete the user with id1
+
